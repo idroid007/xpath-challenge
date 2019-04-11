@@ -1,4 +1,4 @@
-function checkbox(status="all")
+function checkboxPath(status="all")
 {
     //status could be checked, unchecked and all
      status=status.toLowerCase();
@@ -17,11 +17,11 @@ function checkbox(status="all")
         }
     }
 } 
-function getInputFieldByUid(uid){
+function getInputFieldByUidPath(uid){
     return $x(`//input[@type="text" and contains(@id,"${uid}")]`)
 }
 
-function getInputFieldByDisplayText(text){
+function getInputFieldByDisplayTextPath(text){
     let id=null;
     let is_present=null;
     let fields=null
