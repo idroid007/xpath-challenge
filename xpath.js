@@ -25,6 +25,7 @@ function getInputFieldByDisplayTextPath(text){
     let id=null;
     let is_present=null;
     let fields=null
+    let id=null;
     //findin the label fields for input
     try{
     fields=$x('//input[@type="text"]//parent::div//parent::div//parent::div[@class="WMFO"]//preceding-sibling::div[@class="WJFO WMEO"]//label');
@@ -32,9 +33,9 @@ function getInputFieldByDisplayTextPath(text){
         console.log("Something Fishyy!")
     }    
     for(let i=0;i<fields.length;i++){
-       is_present =fields.textContent.toLowerCase().includes(text);
+       is_present =fields.textContent.toLowerCase().includes(text.toLowerCase());
         if(is_present){
-           let id= fields.getAttribute("for");
+           id= fields.getAttribute("for");
         }
     }
     //if we get a "for" atribute value from the label then we can select input field on the basis of its id
