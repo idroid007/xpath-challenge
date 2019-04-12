@@ -25,7 +25,7 @@ function getInputFieldByDisplayTextPath(text){
     let id=null;
     let is_present=null;
     let fields=null
-    let id=null;
+    
     //findin the label fields for input
     try{
     fields=$x('//input[@type="text"]//parent::div//parent::div//parent::div[@class="WMFO"]//preceding-sibling::div[@class="WJFO WMEO"]//label');
@@ -43,6 +43,8 @@ function getInputFieldByDisplayTextPath(text){
     
 
 }
+
+getInputFieldByDisplayTextPath("hi")
 
 
 
